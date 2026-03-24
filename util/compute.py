@@ -276,3 +276,4 @@ def run_downscaling(basin_id):
     fn_trk_out = fn_tracks_duplicates(get_fn_tracks(b))
     ds.to_netcdf(fn_trk_out, mode = 'w')
     print('Saved %s' % fn_trk_out)
+    return fn_trk_out

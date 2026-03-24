@@ -4,6 +4,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 import shutil
 import namelist
 import sys
+from scripts import generate_land_masks
 from util import compute
 
 def run_model():
@@ -11,7 +12,8 @@ def run_model():
     os.makedirs(f_base, exist_ok = True)
     print('Saving model output to %s' % f_base)
 
-    compute.compute_downscaling_inputs()
+    #generate_land_masks.generate_land_masks()
+    #compute.compute_downscaling_inputs()
 
     print('Running tracks for North Atlantic basin...')
     fn_track = compute.run_downscaling('NA')
